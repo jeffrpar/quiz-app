@@ -1,8 +1,21 @@
 body {
     margin: auto;
+    background-color: rgb(44, 44, 44);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    color: white;
+}
+
+button {
+    background-color: rgb(41, 12, 39);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+span {
+    padding: 5px;
 }
