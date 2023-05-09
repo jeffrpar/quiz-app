@@ -1,0 +1,8 @@
+body {
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
