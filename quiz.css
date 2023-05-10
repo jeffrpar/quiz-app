@@ -2,3 +2,75 @@ body {
     color: white;
     
 }
+
+.choice-container {
+    display: flex;
+    margin-bottom: .8rem;
+    width: 100%;
+    border-radius: 5px;
+    background: rgb(33, 16, 104);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(11, 11, 11);
+    transform: scale(1.02);
+    transition: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: darkred;
+}
+
+/* Heads Up Display */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;  
+    height: 3rem;
+    border: .2rem solid white;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: white;
+    width: 0%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
