@@ -1,6 +1,5 @@
 body {
     color: white;
-    
 }
 
 .choice-container {
@@ -66,7 +65,7 @@ body {
     height: 100%;
     background: white;
     width: 0%;
-    
+
 }
 
 @media screen and (max-width: 768px) {
