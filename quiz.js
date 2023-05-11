@@ -50,11 +50,30 @@ let questions = [
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
+let timeLeft = 75; // Time in seconds
+let timer;
+
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
+    startTimer()
+}
+
+// Function to start the timer
+const startTimer = () => {
+    timer = setInterval(() => {
+      timeLeft--
+      timerText.innerText = timeLeft
+  
+      if (timeLeft <= 0) {
+        clearInterval(timer)
+        // Timer has reached zero, perform actions here
+        // For example, display a message or redirect to another page
+        window.location.href = "end.html"
+      }
+    }, 1000) // Update timer every second (1000 milliseconds)
 }
 
 getNewQuestion = () => {
@@ -96,6 +115,10 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
+        else {
+            reduceTimer(10)
+        }
+
         selectedChoice.parentElement.classList.add(classToApply)
 
         setTimeout(() => {
@@ -110,5 +133,13 @@ incrementScore = num => {
     score +=num
     scoreText.innerText = score
 }
+
+reduceTimer = seconds => {
+    timeLeft -= seconds;
+    if (timeLeft < 0) {
+      timeLeft = 0;
+    }
+    timerText.innerText = timeLeft;
+  };
 
 startGame()
