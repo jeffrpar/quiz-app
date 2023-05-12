@@ -13,36 +13,36 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2, 
+        question: 'Arrays in JavaScript can be used to store what?',
+        choice1: 'numbers and strings',
+        choice2: 'booleans',
+        choice3: 'other arrays',
+        choice4: 'All of the above',
+        answer: 4, 
     },
     {
         question: 
-            'The tallest building in the world is located in which city?',
-        choice1: 'Dubai',
-        choice2: 'Chicago',
-        choice3: 'New York',
-        choice4: 'Beijing',
+            'What does HTML stand for?',
+        choice1: 'Hyper Text Markup Language',
+        choice2: 'Hyper Tag Markup Language',
+        choice3: 'Hyperlinks Text Mark Language',
+        choice4: 'Hyperlinking Text Marking Language',
         answer: 1, 
     },
     {
-        question: 'What U.S. state is proud to call itself the Beaver State?',
-        choice1: 'Maine',
-        choice2: 'Oregon',
-        choice3: 'Virginia',
-        choice4: 'Colorado',
+        question: 'Choose the correct HTML element for the largest heading.',
+        choice1: '<h6>',
+        choice2: '<h1>',
+        choice3: '<head>',
+        choice4: '<header>',
         answer: 2, 
     },
     {
-        question: 'How long does a day last on Saturn?',
-        choice1: '28 hrs',
-        choice2: '17 hrs',
-        choice3: '13.5 hrs',
-        choice4: '10.5 hrs',
+        question: 'Inside which HTML element do we put the JavaScript?',
+        choice1: '<javascript>',
+        choice2: '<js>',
+        choice3: '<link>',
+        choice4: '<script>',
         answer: 4, 
     }
 ]
@@ -117,7 +117,7 @@ choices.forEach(choice => {
         }
 
         else {
-            reduceTimer(10)
+            reduceTimer(15)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
